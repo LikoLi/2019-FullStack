@@ -10,4 +10,4 @@
 2. 给py文件添加执行权限
     > chmod a+x hello.py
 3. 运行Python
-    > ./hello.py
+    > ./hello.
