@@ -120,5 +120,93 @@ caption标签必须紧随table标签之后。只能对一个表格定义一个�
 
 ### input控件
 
-`<input />`标签为单标签，type属性为其最基本的属性，其取值有多种，用于指定
+`<input />`标签为单标签，type属性为其最基本的属性，其取值有多种，用于指定不同的控件类型。除了type属性之外, `<input />`标签还可以定义很多其他的属性, 其常用属性如下表所示。
+
+| 属性      | 属性值       | 描述                        |
+| --------- | ------------ | --------------------------- |
+| type      | text         | 单行文本输入框              |
+| type      | password     | 密码输入框                  |
+| type      | radio        | 单选按钮                    |
+| type      | checkbox     | 复选框                      |
+| type      | button       | 普通按钮                    |
+| type      | submit       | 提交按钮                    |
+| type      | reset        | 重置按钮                    |
+| type      | image        | 图像形式的提交按钮          |
+| type      | file         | 文件域                      |
+| name      | 由用户自定义 | 控件的名称                  |
+| value     | 由用户自定义 | input控件中的默认文本值     |
+| size      | 正整数       | input控件在页面中的显示宽度 |
+| checked   | checked      | 定义选择控件默认被选中的项  |
+| maxlength | 正整数       | 控件允许输入的最多字符数    |
+
+### label标签
+
+label标签为input元素定义标注(标签)。
+
+作用: 用于绑定一个表单元素， 当点击label标签的时候，被绑定的表单元素就会获得输入焦点
+
+for属性规定label与哪个表单元素绑定。
+
+for属性绑定表单元素的id属性值
+
+```html
+<label for="male">Male</label>
+<input type="radio" name="sex" id="male" value="male" />
+```
+
+### textarea控件(文本域)
+
+如果需要输入大量的信息, 就需要用到`<textarea></textarea>`标签, 通过textarea控件可以轻松地创建多行文本输入框，其基本语法格式如下:
+
+```html
+<textarea cols="每行中的字符数" rows="显示的行数">
+	文本内容
+</textarea>
+```
+
+### 下拉菜单
+
+使用select控件定义下拉菜单的基本语法格式如下:
+
+```html
+<select>
+  <option>选项1</option>
+  <option>选项2</option>
+  <option>选项3</option>
+  ...
+</select>
+```
+
+注意: 
+
+	1. `<select></select>`中至少包含一对`<option></option>`
+ 	2. 在option的定义selected="selected"时, 当前项即为默认选中项。
+
+### 表单域
+
+在HTML中, form标签被用于定义表单域，即创建一个表单，以实现用户信息的收集和传递，form中的所有内容都会被提交到服务器。创建表单域的基本语法格式如下:
+
+```html
+<form action="url地址" method="提交方式" name="表单名称">
+  各种表单控件
+</form>
+```
+
+常用属性:
+
+ 1. Action
+
+    在表单收集到信息后, 需要将信息传递给服务器进行处理, action属性用于指定接收并处理表单数据的服务器程序的url地址。
+
+2. method
+
+   用于设置表单数据的提交方式，其取值为get或post
+
+3. name
+
+   用于指定表单的名称，以区分同一个页面中的多个表单。
+
+注意: 每个表单都应该有自己的表单域。
+
+# HTML5新标签与特性
 
